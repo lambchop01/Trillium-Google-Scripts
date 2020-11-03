@@ -13,7 +13,7 @@ function generateinvoice() {
     
   
   var Spreadsheetid = SpreadsheetApp.getActiveSpreadsheet().getId()
-  var datevalue = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Blank Pay Sheet').getRange('H1').getValue()
+  var datevalue = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Blank Pay Sheet').getRange('A2').getValue()
   var date = Utilities.formatDate(datevalue, "GMT-5", "MMM dd yyyy")
   var invoicesheetid = invoicesheet.getSheetId()
     
@@ -44,6 +44,7 @@ function generateinvoice() {
   var idinvoice = dir.createFile(Invoice).getId();
     
   //or send as email
+  
   var email = "board@trilliumlamb.ca";
   var body = "Here is the latest. Thanks"; 
   var subject = "Invoice "+date;
