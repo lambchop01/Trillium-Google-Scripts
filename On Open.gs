@@ -1,6 +1,7 @@
 function onOpen() {
   var who = Session.getActiveUser()
-  if (who == "trilliumlamb@gmail.com"){
+  if (who == "trilliumlamb@gmail.com"){}
+  else{
     var ss = SpreadsheetApp.getActiveSpreadsheet();
     var invoicesheet = ss.getSheetByName('Invoice Generator');
     var tagsheet = ss.getSheetByName('Tag Numbers')
